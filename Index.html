@@ -1,52 +1,116 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Workshop Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fc;
+        }
+
+        .container {
+            width: 400px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="month"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
 </head>
 <body>
+
+<div class="container">
 
 <h2>Workshop Registration</h2>
 
 <form>
 
-    
     <h3>Personal Details</h3>
 
     <label>Name:</label><br>
-    <input type="text" name="name"><br><br>
+    <input type="text" name="name" required>
 
     <label>Email:</label><br>
-    <input type="email" name="email"><br><br>
-<h3>Payment Method</h3>
+    <input type="email" name="email" required>
+
+    <h3>Payment Method</h3>
 
     <input type="radio" name="payment" value="card"> Credit Card<br>
     <input type="radio" name="payment" value="netbanking"> Net Banking<br><br>
 
-   
     <h4>Credit Card Details</h4>
 
     <label>Card Number:</label><br>
-    <input type="text" name="card_number"><br><br>
+    <input type="text" name="card_number">
 
     <label>Expiry Date:</label><br>
-    <input type="month" name="expiry"><br><br>
+    <input type="month" name="expiry">
 
     <label>CVV:</label><br>
-    <input type="password" name="cvv"><br><br>
+    <input type="password" name="cvv">
 
-    
     <h4>Net Banking Details</h4>
-<label>Select Bank:</label><br>
+
+    <label>Select Bank:</label><br>
     <select name="bank">
         <option>State Bank of India</option>
         <option>HDFC Bank</option>
         <option>ICICI Bank</option>
         <option>Axis Bank</option>
-    </select><br><br>
+    </select>
 
-    <!-- Submit -->
     <input type="submit" value="Register & Pay">
 
 </form>
+
+</div>
 
 </body>
 </html>
